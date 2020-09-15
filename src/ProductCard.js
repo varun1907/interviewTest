@@ -11,16 +11,24 @@ function ProductCard({ product }) {
                 <img style={{width:'100%'}} className="" src={`${product.image_urls.x520}`} alt={product.name}></img>
             </div>
             <div className="productCard_info">
-                <div className="productCard_rating">
-                    <span style={{fontSize:15}}>{product.rating}</span>
-                    <GradeIcon style={{ fontSize: 15,color:'gray' }}/>
-                </div>
+                {
+                    product.rating
+                    ?
+                    <div className="productCard_rating">
+                        <span style={{fontSize:15}}>{product.rating}</span>
+                        <GradeIcon style={{ fontSize: 15,color:'gray' }}/>
+                    </div>
+                    :
+                    null
+
+                }
+                
                 <p className="productCard_title">{product.name}</p>
                 <p style={{color:'gray',fontSize:'12px'}}>({product.weight} {product.weight_unit})</p>
     <p className="productCard_price">$ {product.price}<span style={{color:'gray',paddingLeft:7}}><small style={{textDecoration:'line-through'}}>$ {product.final_price}</small></span></p>
                 
                 <div className="productCard_button">
-                <Button style={{backgroundColor:'#4fcf64'}} variant="contained">ADD TO CART</Button>
+    <Button style={product.is_in_stock ? {backgroundColor:'#4fcf64'} : {backgroundColor:'gray'}} variant="contained">{product.is_in_stock?'ADD TO CART':'OUT OF STOCK'}</Button>
 
                 <YouTubeIcon disabled/>
                 </div>

@@ -4,3 +4,21 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+.product_footer{
+    display:flex;
+    flex-direction:row;
+    border: 0.1px solid gray;
+    justify-content: space-between;
+    align-items: center;
+    height:40px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.product_footer_for
+{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    flex:2
+}
