@@ -1,8 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+Live Version Of Project is hosted on firebase.[https://interviewtest-ff390.web.app](https://interviewtest-ff390.web.app)
+To run locally on your machine folloe below steps
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+Install all dependencies on your machine.
 
 ### `npm start`
 

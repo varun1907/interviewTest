@@ -11,7 +11,7 @@ function App() {
       {
           let response = await fetch('https://backend.ustraa.com/rest/V1/api/homemenucategories/v1.0.1?device_type=mob')
           let result = await response.json()
-          let tempCategory = [...result.category_list, {category_id:999,category_name:'View All',category_image:''}]
+          let tempCategory = [{category_id:999,category_name:'View All',category_image:''}, ...result.category_list, {category_id:1000,category_name:'View All',category_image:''}]
           setCategories(tempCategory)
       }
       fetchCategory()

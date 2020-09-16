@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import './Product.css'
 import ProductCard from './ProductCard'
 import CategotyPopup from './CategoryPopup'
+import Button from '@material-ui/core/Button';
+
 function Product({ selectedOption, selectedOptionText, setselectedOptionText ,categories, setselectedOption }) {
 
     const [productList, setProductList] = useState([])
@@ -10,7 +12,7 @@ function Product({ selectedOption, selectedOptionText, setselectedOptionText ,ca
     useEffect(() => {
         async function fetchProduct()
         {
-            if(selectedOption === 999)
+            if(selectedOption === 999 || selectedOption === 1000)
             {
                 alert('View all clicked')
                 return;
@@ -53,9 +55,9 @@ function Product({ selectedOption, selectedOptionText, setselectedOptionText ,ca
             
         { productList.length > 3 && showAll ==false
             ? 
-                <button onClick={handleView}>view more</button>
+            <Button onClick={handleView}>View More</Button>
                 :
-            showAll ? <button onClick={handleView}>view Less</button> : null
+            showAll ? <Button onClick={handleView}>View Less</Button> : null
         }
 
         </div>
